@@ -7,4 +7,5 @@ Supports serialization and deserialization of the following types:
 - Standard template library: array, vector, list
 
 Also handles the following:
-- endianness: automatically converted to big endian during serialization. can be disabled using NoSwap<T>
+- endianness: automatically convert bytes to use big endian ordering during serialization(object to bytes). Automatically convert bytes to respect host endianness during deserialization(bytes to object).
+- automatic endianness can be disabled by wrapping the object with NoSwap<T>
